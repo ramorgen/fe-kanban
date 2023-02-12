@@ -19,12 +19,15 @@
       </div>
       <!-- show every task card of this column, enable drag and drop -->
       <draggable
+         class="min-w-[200px]"
          v-model="tasks"
          group="cols"
          item-key="s"
          :animation="150"
          @end="dragEnd"
          :data-index="props.colIndex"
+         drag-class="drag"
+         ghost-class="ghost"
       >
          <template #item="{ element: task, index }">
             <TaskCard @click="showTask(task, index)" class="mb-[20px]">
@@ -119,6 +122,14 @@
          #e9effa 0%,
          rgba(233, 239, 250, 0.5) 100%
       );
+      border-radius: 6px;
+   }
+   .drag {
+      background-color: rgba(99, 95, 199, 0.95);
+      color: white;
+   }
+   .ghost {
+      background-color: rgba(129, 129, 129, 0.3);
       border-radius: 6px;
    }
 </style>
