@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+   /* plus-jakarta-sans-500 - latin */
+   @font-face {
+      font-family: "Plus Jakarta Sans";
+      font-style: normal;
+      font-weight: 500;
+      src: local(""),
+         url("../fonts/plus-jakarta-sans-v3-latin-500.woff2") format("woff2");
+   }
+
+   /* plus-jakarta-sans-700 - latin */
+   @font-face {
+      font-family: "Plus Jakarta Sans";
+      font-style: normal;
+      font-weight: 700;
+      src: local(""),
+         url("../fonts/plus-jakarta-sans-v3-latin-700.woff2") format("woff2");
+   }
+
+   h1,
+   h2,
+   h3,
+   h4 {
+      @apply font-bold;
+   }
+
+   h1 {
+      @apply text-f24 leading-7;
+   }
+
+   h2 {
+      @apply text-f18 leading-6;
+   }
+
+   h3 {
+      @apply text-f15 leading-5;
+   }
+
+   h4 {
+      @apply text-f12 leading-4 tracking-[0.15rem];
+   }
+   .body-m {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 15px;
+   }
+
+   .body-l {
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 23px;
+   }
+
+   .v-enter-active,
+   .v-leave-active {
+      transition: opacity 0.5s ease;
+   }
+
+   .v-enter-from,
+   .v-leave-to {
+      opacity: 0;
+   }
+}
